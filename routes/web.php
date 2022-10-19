@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\SiteController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -38,3 +39,6 @@ Route::middleware([
     Route::resource('files', FileController::class);
 
 });
+
+Route::get('home', [SiteController::class, 'home'])->name('home')
+?>
